@@ -13,6 +13,7 @@
 		3D80B6C42225CDA1003FF215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D80B6C22225CDA1003FF215 /* Main.storyboard */; };
 		3D80B6C62225CDA3003FF215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D80B6C52225CDA3003FF215 /* Assets.xcassets */; };
 		3D80B6C92225CDA3003FF215 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D80B6C72225CDA3003FF215 /* LaunchScreen.storyboard */; };
+		EA7918062229ECA100339D89 /* Therma-Transparant.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7918052229ECA000339D89 /* Therma-Transparant.png */; };
 		EAEBFD1222284FEC005ABD75 /* charlieTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEBFD1122284FEC005ABD75 /* charlieTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		3D80B6C52225CDA3003FF215 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D80B6C82225CDA3003FF215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D80B6CA2225CDA3003FF215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA7918052229ECA000339D89 /* Therma-Transparant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Therma-Transparant.png"; path = "../../Therma-Transparant.png"; sourceTree = "<group>"; };
 		EAEBFD1122284FEC005ABD75 /* charlieTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = charlieTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 				3D80B6C02225CDA1003FF215 /* ViewController.swift */,
 				3D80B6C22225CDA1003FF215 /* Main.storyboard */,
 				3D80B6C52225CDA3003FF215 /* Assets.xcassets */,
+				EA7918052229ECA000339D89 /* Therma-Transparant.png */,
 				3D80B6C72225CDA3003FF215 /* LaunchScreen.storyboard */,
 				3D80B6CA2225CDA3003FF215 /* Info.plist */,
 			);
@@ -129,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D80B6C92225CDA3003FF215 /* LaunchScreen.storyboard in Resources */,
+				EA7918062229ECA100339D89 /* Therma-Transparant.png in Resources */,
 				3D80B6C62225CDA3003FF215 /* Assets.xcassets in Resources */,
 				3D80B6C42225CDA1003FF215 /* Main.storyboard in Resources */,
 			);
