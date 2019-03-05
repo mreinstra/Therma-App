@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		3D1287AD22284FDB00430BF6 /* megtest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1287AC22284FDB00430BF6 /* megtest.swift */; };
+		3D3F66BE222F1BB600D065FF /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F66BD222F1BB600D065FF /* info.swift */; };
+		3D3F66C0222F1D0100D065FF /* SafetyTalksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F66BF222F1D0100D065FF /* SafetyTalksTableViewController.swift */; };
 		3D80B6BF2225CDA1003FF215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D80B6BE2225CDA1003FF215 /* AppDelegate.swift */; };
 		3D80B6C12225CDA1003FF215 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D80B6C02225CDA1003FF215 /* ViewController.swift */; };
 		3D80B6C42225CDA1003FF215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D80B6C22225CDA1003FF215 /* Main.storyboard */; };
 		3D80B6C62225CDA3003FF215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D80B6C52225CDA3003FF215 /* Assets.xcassets */; };
 		3D80B6C92225CDA3003FF215 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D80B6C72225CDA3003FF215 /* LaunchScreen.storyboard */; };
-		EA7918062229ECA100339D89 /* Therma-Transparant.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7918052229ECA000339D89 /* Therma-Transparant.png */; };
 		EAEBFD1222284FEC005ABD75 /* charlieTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEBFD1122284FEC005ABD75 /* charlieTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D1287AC22284FDB00430BF6 /* megtest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = megtest.swift; sourceTree = "<group>"; };
+		3D3F66BD222F1BB600D065FF /* info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
+		3D3F66BF222F1D0100D065FF /* SafetyTalksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyTalksTableViewController.swift; sourceTree = "<group>"; };
 		3D80B6BB2225CDA1003FF215 /* Therma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Therma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D80B6BE2225CDA1003FF215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D80B6C02225CDA1003FF215 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +29,6 @@
 		3D80B6C52225CDA3003FF215 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D80B6C82225CDA3003FF215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D80B6CA2225CDA3003FF215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA7918052229ECA000339D89 /* Therma-Transparant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Therma-Transparant.png"; path = "../../Therma-Transparant.png"; sourceTree = "<group>"; };
 		EAEBFD1122284FEC005ABD75 /* charlieTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = charlieTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,9 +68,10 @@
 				3D80B6C02225CDA1003FF215 /* ViewController.swift */,
 				3D80B6C22225CDA1003FF215 /* Main.storyboard */,
 				3D80B6C52225CDA3003FF215 /* Assets.xcassets */,
-				EA7918052229ECA000339D89 /* Therma-Transparant.png */,
 				3D80B6C72225CDA3003FF215 /* LaunchScreen.storyboard */,
 				3D80B6CA2225CDA3003FF215 /* Info.plist */,
+				3D3F66BD222F1BB600D065FF /* info.swift */,
+				3D3F66BF222F1D0100D065FF /* SafetyTalksTableViewController.swift */,
 			);
 			path = Therma;
 			sourceTree = "<group>";
@@ -132,7 +135,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D80B6C92225CDA3003FF215 /* LaunchScreen.storyboard in Resources */,
-				EA7918062229ECA100339D89 /* Therma-Transparant.png in Resources */,
 				3D80B6C62225CDA3003FF215 /* Assets.xcassets in Resources */,
 				3D80B6C42225CDA1003FF215 /* Main.storyboard in Resources */,
 			);
@@ -145,9 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D3F66BE222F1BB600D065FF /* info.swift in Sources */,
 				3D80B6C12225CDA1003FF215 /* ViewController.swift in Sources */,
 				3D1287AD22284FDB00430BF6 /* megtest.swift in Sources */,
 				3D80B6BF2225CDA1003FF215 /* AppDelegate.swift in Sources */,
+				3D3F66C0222F1D0100D065FF /* SafetyTalksTableViewController.swift in Sources */,
 				EAEBFD1222284FEC005ABD75 /* charlieTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
