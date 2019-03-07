@@ -59,7 +59,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSa-uL-6xr">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSa-uL-6xr">
                                             <rect key="frame" x="16" y="0.0" width="277" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -69,7 +69,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="zMX-bH-TbM" kind="presentation" trigger="accessoryAction" id="bB0-cM-Yd1"/>
+                                    <segue destination="zMX-bH-TbM" kind="presentation" id="e18-9n-GtM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -78,9 +78,6 @@
                             <outlet property="delegate" destination="PxW-qH-aFj" id="Bhp-vq-QLr"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="label" destination="T0r-aX-QhN" id="SIS-wg-Tef"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GiT-ug-5Gr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

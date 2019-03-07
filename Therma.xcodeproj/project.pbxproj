@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2EF5AA2231A25C00C0E5CC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EF5A92231A25C00C0E5CC /* TableViewController.swift */; };
 		3D3F66BE222F1BB600D065FF /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F66BD222F1BB600D065FF /* info.swift */; };
 		3D3F66C0222F1D0100D065FF /* SafetyTalksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F66BF222F1D0100D065FF /* SafetyTalksTableViewController.swift */; };
 		3D80B6BF2225CDA1003FF215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D80B6BE2225CDA1003FF215 /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D2EF5A92231A25C00C0E5CC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3D3F66BD222F1BB600D065FF /* info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
 		3D3F66BF222F1D0100D065FF /* SafetyTalksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyTalksTableViewController.swift; sourceTree = "<group>"; };
 		3D80B6BB2225CDA1003FF215 /* Therma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Therma.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 				3D80B6CA2225CDA3003FF215 /* Info.plist */,
 				3D3F66BD222F1BB600D065FF /* info.swift */,
 				3D3F66BF222F1D0100D065FF /* SafetyTalksTableViewController.swift */,
+				3D2EF5A92231A25C00C0E5CC /* TableViewController.swift */,
 			);
 			path = Therma;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				3D3F66BE222F1BB600D065FF /* info.swift in Sources */,
 				3D80B6C12225CDA1003FF215 /* ViewController.swift in Sources */,
 				3D80B6BF2225CDA1003FF215 /* AppDelegate.swift in Sources */,
+				3D2EF5AA2231A25C00C0E5CC /* TableViewController.swift in Sources */,
 				3D3F66C0222F1D0100D065FF /* SafetyTalksTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
