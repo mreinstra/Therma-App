@@ -101,6 +101,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQM-26-b4d">
+                                <rect key="frame" x="153" y="293" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next View"/>
+                                <connections>
+                                    <segue destination="CsE-2z-9uA" kind="presentation" id="Fxi-2F-Ek4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bUW-Vj-rtT"/>
@@ -117,13 +125,23 @@
                     <view key="view" contentMode="scaleToFill" id="YDS-Or-Khf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkR-5x-tjj">
+                                <rect key="frame" x="153" y="318" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next View"/>
+                                <connections>
+                                    <segue destination="dVF-Ge-mfz" kind="presentation" id="z9A-p8-O94"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="y9e-mE-g0t"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l26-vZ-ooi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2492" y="126"/>
+            <point key="canvasLocation" x="2492" y="125.4872563718141"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dXR-49-zLb">
@@ -132,13 +150,23 @@
                     <view key="view" contentMode="scaleToFill" id="k6t-m6-gJ9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRD-qx-BWG">
+                                <rect key="frame" x="153" y="318" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next View"/>
+                                <connections>
+                                    <segue destination="coc-oH-pTZ" kind="presentation" id="od6-c7-Smd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="352-SJ-SQU"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwh-qY-JRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3348" y="120"/>
+            <point key="canvasLocation" x="3333.5999999999999" y="125.4872563718141"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8zz-0S-YCO">
@@ -153,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRq-II-RJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4236" y="119"/>
+            <point key="canvasLocation" x="4212" y="125"/>
         </scene>
     </scenes>
     <resources>
