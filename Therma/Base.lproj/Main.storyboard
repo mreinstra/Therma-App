@@ -76,7 +76,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.33725490200000002" green="0.74509803919999995" blue="1" alpha="0.42025198064788738" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.33725490200000002" green="0.74509803919999995" blue="1" alpha="0.78697183100000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="zMX-bH-TbM" kind="presentation" id="e18-9n-GtM"/>
