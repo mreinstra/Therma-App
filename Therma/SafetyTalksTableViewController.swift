@@ -9,7 +9,10 @@
 import UIKit
 import WebKit
 
+
+
 class SafetyTalksTableViewController: UITableViewController{
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
