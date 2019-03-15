@@ -32,6 +32,10 @@ class pdfViewer: UIViewController {
         pdfView.reload()
     }
     
+    @IBAction func doneButton()
+    {
+    self.dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
