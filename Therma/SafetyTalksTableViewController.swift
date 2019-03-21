@@ -135,6 +135,15 @@ class SafetyTalksTableViewController: UITableViewController{
         // Return false if you do not want the specified item to be editable.
         return false
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is pdfViewer
+        {
+            let vc = segue.destination as? pdfViewer
+            vc?.link = "https://safety.therma.com/wp-content/uploads/sites/2/2019/02/03-25-19-Temporary-Heating-Devices-No-12.pdf"
+        }
+    }
 
 }
 

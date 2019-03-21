@@ -14,13 +14,15 @@ class pdfViewer: UIViewController {
 
     @IBOutlet weak var pdfView: WKWebView!
     
+    var link:String = ""
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
 //        let url = URL(string: "http://safety.therma.com")
 //        let request = URLRequest(url: url!)
 //        pdfView.load(request)
-        let pdfURL = URL(string: String("https://safety.therma.com/wp-content/uploads/sites/2/2019/02/03-25-19-Temporary-Heating-Devices-No-12.pdf"))
+        let pdfURL = URL(string: String(link))
         let myRequest = URLRequest(url: pdfURL!)
         pdfView.load(myRequest)
         print(myRequest)
