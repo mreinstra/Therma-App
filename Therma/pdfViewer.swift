@@ -34,7 +34,7 @@ class pdfViewer: UIViewController {
     
     @IBAction func doneButton()
     {
-    self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 
     /*

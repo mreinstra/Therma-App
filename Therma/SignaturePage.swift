@@ -15,6 +15,10 @@ class SignaturePage: UIViewController {
 
     @IBOutlet weak var drawingImageView: UIImageView!
     
+    @IBAction func doneButton()
+    {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -213,18 +213,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="topicField:" destination="CsE-2z-9uA" eventType="editingDidEnd" id="Y3U-zI-7Iu"/>
+                                    <action selector="topicField:" destination="CsE-2z-9uA" eventType="editingDidEndOnExit" id="gz4-Zx-gkG"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkR-5x-tjj">
-                                <rect key="frame" x="163" y="565" width="62" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcY-zX-aTN">
+                                <rect key="frame" x="324" y="33" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Next">
-                                    <color key="titleColor" red="0.33725490200000002" green="0.74509803919999995" blue="1" alpha="0.78697183100000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dVF-Ge-mfz" kind="presentation" id="z9A-p8-O94"/>
+                                    <segue destination="dVF-Ge-mfz" kind="presentation" id="vhr-xT-ysL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfD-sO-Tn3">
+                                <rect key="frame" x="16" y="33" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButton" destination="CsE-2z-9uA" eventType="touchUpInside" id="gx4-4L-UkH"/>
+                                    <action selector="doneButton" destination="zMX-bH-TbM" eventType="touchUpInside" id="pj0-iG-8e5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -244,17 +256,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRD-qx-BWG">
-                                <rect key="frame" x="159" y="551" width="62" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" red="0.33725490200000002" green="0.74509803919999995" blue="1" alpha="0.78697183100000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="coc-oH-pTZ" kind="presentation" id="od6-c7-Smd"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info Page #2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFH-aE-s94">
                                 <rect key="frame" x="0.0" y="20" width="375" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -288,6 +289,30 @@
                                 <rect key="frame" x="70" y="344" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWc-ym-jkb">
+                                <rect key="frame" x="324" y="33" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="coc-oH-pTZ" kind="presentation" id="exN-Ro-cWc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWB-8H-cD5">
+                                <rect key="frame" x="16" y="33" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButton" destination="zMX-bH-TbM" eventType="touchUpInside" id="LPW-rl-gNs"/>
+                                    <action selector="doneButton" destination="CsE-2z-9uA" eventType="touchUpInside" id="Ofs-WI-jyv"/>
+                                    <action selector="doneButton" destination="dVF-Ge-mfz" eventType="touchUpInside" id="YSn-5n-2sB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="352-SJ-SQU"/>
@@ -298,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwh-qY-JRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3336.8000000000002" y="132.68365817091455"/>
+            <point key="canvasLocation" x="3257" y="133"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8zz-0S-YCO">
@@ -332,7 +357,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRq-II-RJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="qe5-aL-DQo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4212" y="133"/>
+            <point key="canvasLocation" x="4082" y="133"/>
         </scene>
     </scenes>
     <resources>

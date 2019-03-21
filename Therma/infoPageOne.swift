@@ -20,6 +20,11 @@ class infoPageOne: UIViewController {
         (sender as AnyObject).resignFirstResponder()
     }
     
+    @IBAction func doneButton()
+    {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
