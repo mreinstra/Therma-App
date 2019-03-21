@@ -22,6 +22,8 @@ class SignaturePage: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+   
+    
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
         
         UIGraphicsBeginImageContext(view.frame.size)
