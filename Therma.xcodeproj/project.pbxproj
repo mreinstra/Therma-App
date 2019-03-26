@@ -10,6 +10,7 @@
 		3D2EF5AC2231A6A100C0E5CC /* pdfViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EF5AB2231A6A100C0E5CC /* pdfViewer.swift */; };
 		3D3F66BE222F1BB600D065FF /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F66BD222F1BB600D065FF /* info.swift */; };
 		3D3F66C0222F1D0100D065FF /* SafetyTalksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F66BF222F1D0100D065FF /* SafetyTalksTableViewController.swift */; };
+		3D73924E224AC74100F7EAD1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D73924D224AC74100F7EAD1 /* WebKit.framework */; };
 		3D80B6BF2225CDA1003FF215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D80B6BE2225CDA1003FF215 /* AppDelegate.swift */; };
 		3D80B6C12225CDA1003FF215 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D80B6C02225CDA1003FF215 /* ViewController.swift */; };
 		3D80B6C42225CDA1003FF215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D80B6C22225CDA1003FF215 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		3D2EF5AB2231A6A100C0E5CC /* pdfViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdfViewer.swift; sourceTree = "<group>"; };
 		3D3F66BD222F1BB600D065FF /* info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
 		3D3F66BF222F1D0100D065FF /* SafetyTalksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyTalksTableViewController.swift; sourceTree = "<group>"; };
+		3D73924D224AC74100F7EAD1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3D80B6BB2225CDA1003FF215 /* Therma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Therma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D80B6BE2225CDA1003FF215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D80B6C02225CDA1003FF215 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,17 +41,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D73924E224AC74100F7EAD1 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D73924C224AC74000F7EAD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D73924D224AC74100F7EAD1 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3D80B6B22225CDA0003FF215 = {
 			isa = PBXGroup;
 			children = (
 				3D80B6BD2225CDA1003FF215 /* Therma */,
 				3D80B6BC2225CDA1003FF215 /* Products */,
+				3D73924C224AC74000F7EAD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
