@@ -57,7 +57,9 @@ class SafetyTalksTableViewController: UITableViewController{
         {
             print("RegEx error!")
         }
-        print(myList)
+//        print("here's the list")
+//        print(myList)
+//        print("end of list")
         return myList
     }
     
@@ -72,6 +74,9 @@ class SafetyTalksTableViewController: UITableViewController{
     func getLinks() {
         let myURL = URL(string: String("https://safety.therma.com/category/weekly-toolbox-meetings/"))
         var myRequest = URLRequest(url: myURL!)
+//        print("HI")
+//        print(myURL)
+//        print("BYE")
         // To use the post method or customize the headers, look at the URLRequest documentation: https://developer.apple.com/documentation/foundation/urlrequest
         // Some examples:
         //    myRequest.httpMethod = "POST"
