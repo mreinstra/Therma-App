@@ -1,14 +1,14 @@
 //
-//  infoPageOne.swift
+//  dateAndTime.swift
 //  Therma
 //
-//  Created by Charlie Donnelly on 3/21/19.
+//  Created by Meg Reinstra on 3/28/19.
 //  Copyright © 2019 Meg Reinstra. All rights reserved.
 //
 
 import UIKit
 
-class infoPageOne: UIViewController {
+class dateAndTime: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,15 +16,12 @@ class infoPageOne: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func topicField(_ sender: Any) {
-        (sender as AnyObject).resignFirstResponder()
-    }
-    
     @IBAction func doneButton()
     {
         self.dismiss(animated: true, completion: nil)
     }
     
+
     /*
     // MARK: - Navigation
 
