@@ -34,7 +34,10 @@ class SafetyTalksTableViewController: UITableViewController{
         var myList = [String]()
         do
         {
-            let regex = try NSRegularExpression(pattern: "<a .*? href=\"(.*?)\" ", options: NSRegularExpression.Options.caseInsensitive)
+            let regex = try NSRegularExpression(pattern: "<h2 class=\"entry-title\">([a-z ]*)</h2>", options: NSRegularExpression.Options.caseInsensitive)
+            
+            //"<h2 class=\"entry-title\">[a-z]*</h2>"
+            
             
             // More about using NSRegularExpression can be found here:
             //    https://developer.apple.com/documentation/foundation/nsregularexpression
@@ -57,9 +60,9 @@ class SafetyTalksTableViewController: UITableViewController{
         {
             print("RegEx error!")
         }
-//        print("here's the list")
-//        print(myList)
-//        print("end of list")
+        //        print("here's the list")
+        print(myList)
+        //        print("end of list")
         return myList
     }
     
@@ -72,11 +75,11 @@ class SafetyTalksTableViewController: UITableViewController{
     }
     
     func getLinks() {
-        let myURL = URL(string: String("https://safety.therma.com/category/weekly-toolbox-meetings/"))
+        let myURL = URL(string: String("https://safety.therma.com/category/Toolbox-Meetings-Text-Files/"))
         var myRequest = URLRequest(url: myURL!)
-//        print("HI")
-//        print(myURL)
-//        print("BYE")
+        //        print("HI")
+        //        print(myURL)
+        //        print("BYE")
         // To use the post method or customize the headers, look at the URLRequest documentation: https://developer.apple.com/documentation/foundation/urlrequest
         // Some examples:
         //    myRequest.httpMethod = "POST"
@@ -146,10 +149,15 @@ class SafetyTalksTableViewController: UITableViewController{
         if segue.destination is pdfViewer
         {
             let vc = segue.destination as? pdfViewer
-            vc?.link = "https://safety.therma.com/wp-content/uploads/sites/2/2019/02/03-25-19-Temporary-Heating-Devices-No-12.pdf"
+            
+            if let myCell = sender as? UITableViewCell
+            {
+                let label = myCell.viewWithTag(1000) as! UILabel
+                vc?.name = label.text!
+            }
         }
     }
-
+    
 }
 
 

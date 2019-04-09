@@ -12,56 +12,29 @@ import WebKit
 class pdfViewer: UIViewController {
     
 
-    @IBOutlet weak var pdfView: WKWebView!
     
-    var link:String = ""
+    @IBOutlet weak var nameLabel: UILabel!
+    var link:String = "http://safety.therma.com/wp-content/uploads/sites/2/2019/03/GOOD-HOUSEKEEPING.txt"
+    var name:String = ""
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-//        let url = URL(string: "http://safety.therma.com")
-//        let request = URLRequest(url: url!)
-//        pdfView.load(request)
+        let url = URL(string: "http://safety.therma.com")
+        let request = URLRequest(url: url!)
+        //pdfView.load(request)
         let pdfURL = URL(string: String(link))
         let myRequest = URLRequest(url: pdfURL!)
-        pdfView.load(myRequest)
-        print(link)
-        
-        let matched = matches(for: "(?<=19-)(.*)(?=-No)", in: link)
-        print(matched)
-        //this does all the dashes.
-        var dash:String = matched[0]
-        let matchedNoDash = matches(for: "[^-]*", in: String(dash))
-        print(matchedNoDash)
-        let title = matchedNoDash.joined(separator: " ")
-        print(title)
-        //[^=]*
-       // print(matchedNoDash)
-        // also get the date
-        // ["https://safety.therma.com/wp", "", "content/uploads/sites/2/2019/02/03", "", "25", "", "19", "", "Temporary", "", "Heating", "", "Devices", "", "No", "", "12.pdf", ""]
-        // Filter out all the empty springs:
-        
+        print(myRequest)
+        //pdfView.load(myRequest)
+        nameLabel.text = name
+        print(name)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        pdfView.reload()
-    }
-    // Stack overflow code/standard regex in python
-    func matches(for regex: String, in text: String) -> [String] {
-        
-        do {
-            let regex = try NSRegularExpression(pattern: regex)
-            let results = regex.matches(in: text,
-                                        range: NSRange(text.startIndex..., in: text))
-            return results.map {
-                String(text[Range($0.range, in: text)!])
-            }
-        } catch let error {
-            print("invalid regex: \(error.localizedDescription)")
-            return []
-        }
+        //pdfView.reload()
     }
     
     @IBAction func doneButton()
