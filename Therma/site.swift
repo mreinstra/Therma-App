@@ -9,12 +9,9 @@
 import UIKit
 
 class site: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
+    
+    var myMeeting = info()
     
     @IBAction func doneButton()
     {
@@ -24,6 +21,17 @@ class site: UIViewController {
     @IBAction func topicField(_ sender: Any) {
         (sender as AnyObject).resignFirstResponder()
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("site")
+        print(myMeeting.topic)
+        print(myMeeting.date)
+
+        // Do any additional setup after loading the view.
+    }
+    
+   
     
 
     /*

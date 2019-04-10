@@ -10,16 +10,44 @@ import UIKit
 
 class dateAndTime: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
+    var myMeeting = info()
     
     @IBAction func doneButton()
     {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBOutlet weak var myDatePicker: UIDatePicker!
+    
+    @IBAction func datePickerAction(_ sender: Any) {
+        var dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
+        var strDate = dateFormatter.string(from: myDatePicker.date)
+        
+        myMeeting.date = strDate
+        
+        print(myMeeting.date)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //print("date and time")
+        //print(myMeeting.topic)
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is site
+        {
+            let vc = segue.destination as? site
+            
+            vc?.myMeeting = myMeeting
+        }
+    }
+
     
 
     /*

@@ -332,6 +332,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TpY-Ic-Z8s"/>
                     </view>
+                    <connections>
+                        <outlet property="input" destination="zsR-g6-Fhg" id="7LN-Jj-nd9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2b-cS-Tgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -499,6 +502,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="574712135.45447302">
                                     <!--2019-03-19 18:15:35 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datePickerAction:" destination="7UC-0f-zak" eventType="valueChanged" id="2iH-cw-QEu"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zn8-M1-YB4">
                                 <rect key="frame" x="137" y="445" width="101" height="48"/>
@@ -515,6 +521,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GLy-Vj-Eba"/>
                     </view>
+                    <connections>
+                        <outlet property="myDatePicker" destination="uEm-yd-N4f" id="7Sq-jN-jFV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgS-jA-P0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -602,7 +611,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="P4A-Tb-wJw"/>
-        <segue reference="tKb-Qq-KbX"/>
+        <segue reference="etM-LA-SK6"/>
         <segue reference="mUf-ge-rUx"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,20 +10,40 @@ import UIKit
 
 class topic: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
+    var myMeeting = info()
     
     @IBAction func topicField(_ sender: Any) {
         (sender as AnyObject).resignFirstResponder()
+        myMeeting.topic = input.text!
+        print(myMeeting.topic)
+        //print(input.text!)
     }
     
     @IBAction func doneButton()
     {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    @IBOutlet weak var input: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is dateAndTime
+        {
+            let vc = segue.destination as? dateAndTime
+            
+            vc?.myMeeting = myMeeting
+        }
+    }
+    
     
     /*
     // MARK: - Navigation
