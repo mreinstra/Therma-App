@@ -31,6 +31,16 @@ class site: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is SignaturePage
+        {
+            let vc = segue.destination as? SignaturePage
+            
+            vc?.myMeeting = myMeeting
+        }
+    }
+    
    
     
 

@@ -32,10 +32,11 @@ class dateAndTime: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print("date and time")
-        //print(myMeeting.topic)
         
-        // Do any additional setup after loading the view.
+        var dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
+        var strDate = dateFormatter.string(from: myDatePicker.date)
+        myMeeting.date = strDate
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

@@ -417,10 +417,10 @@
             </objects>
             <point key="canvasLocation" x="4648.8000000000002" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirmation Page-->
         <scene sceneID="8zz-0S-YCO">
             <objects>
-                <viewController id="coc-oH-pTZ" sceneMemberID="viewController">
+                <viewController id="coc-oH-pTZ" customClass="ConfirmationPage" customModule="Therma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CfC-bu-vaK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

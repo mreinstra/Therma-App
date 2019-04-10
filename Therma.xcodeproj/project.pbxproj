@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D0583EE225D927500A9E928 /* pastMeetingsInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0583ED225D927500A9E928 /* pastMeetingsInfoPage.swift */; };
+		3D0583F0225DAFB800A9E928 /* ConfirmationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0583EF225DAFB800A9E928 /* ConfirmationPage.swift */; };
 		3D2EF5AC2231A6A100C0E5CC /* pdfViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EF5AB2231A6A100C0E5CC /* pdfViewer.swift */; };
 		3D3F66BE222F1BB600D065FF /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F66BD222F1BB600D065FF /* info.swift */; };
 		3D3F66C0222F1D0100D065FF /* SafetyTalksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F66BF222F1D0100D065FF /* SafetyTalksTableViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		3D0583ED225D927500A9E928 /* pastMeetingsInfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pastMeetingsInfoPage.swift; sourceTree = "<group>"; };
+		3D0583EF225DAFB800A9E928 /* ConfirmationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationPage.swift; sourceTree = "<group>"; };
 		3D2EF5AB2231A6A100C0E5CC /* pdfViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdfViewer.swift; sourceTree = "<group>"; };
 		3D3F66BD222F1BB600D065FF /* info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
 		3D3F66BF222F1D0100D065FF /* SafetyTalksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyTalksTableViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				3D80B6BE2225CDA1003FF215 /* AppDelegate.swift */,
 				3D80B6C02225CDA1003FF215 /* ViewController.swift */,
 				3D80B6C22225CDA1003FF215 /* Main.storyboard */,
+				3D0583EF225DAFB800A9E928 /* ConfirmationPage.swift */,
 				3D0583ED225D927500A9E928 /* pastMeetingsInfoPage.swift */,
 				3D77DE8B224D3B6600D7C960 /* site.swift */,
 				3D77DE89224D3AE400D7C960 /* dateAndTime.swift */,
@@ -180,6 +183,7 @@
 				3D77DE8A224D3AE400D7C960 /* dateAndTime.swift in Sources */,
 				EA46C84B2243EAD700B134F4 /* topic.swift in Sources */,
 				3D3F66C0222F1D0100D065FF /* SafetyTalksTableViewController.swift in Sources */,
+				3D0583F0225DAFB800A9E928 /* ConfirmationPage.swift in Sources */,
 				EA46C84922416C6400B134F4 /* SignaturePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

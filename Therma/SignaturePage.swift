@@ -12,6 +12,8 @@ class SignaturePage: UIViewController {
     
     var lastPoint = CGPoint.zero
     var swiped = false
+    
+    var myMeeting = info()
 
     @IBOutlet weak var drawingImageView: UIImageView!
     
@@ -133,6 +135,18 @@ class SignaturePage: UIViewController {
         }
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is ConfirmationPage
+        {
+            let vc = segue.destination as? ConfirmationPage
+            
+            vc?.myMeeting = myMeeting
+        }
+    }
+    
+
 
 
 }
