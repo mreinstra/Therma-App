@@ -22,6 +22,7 @@
 		3D80B6C92225CDA3003FF215 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D80B6C72225CDA3003FF215 /* LaunchScreen.storyboard */; };
 		EA46C84922416C6400B134F4 /* SignaturePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46C84822416C6400B134F4 /* SignaturePage.swift */; };
 		EA46C84B2243EAD700B134F4 /* topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46C84A2243EAD700B134F4 /* topic.swift */; };
+		EAEEB098225DB6AD001DD9E2 /* MailObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEEB097225DB6AD001DD9E2 /* MailObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		3D80B6CA2225CDA3003FF215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA46C84822416C6400B134F4 /* SignaturePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignaturePage.swift; sourceTree = "<group>"; };
 		EA46C84A2243EAD700B134F4 /* topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topic.swift; sourceTree = "<group>"; };
+		EAEEB097225DB6AD001DD9E2 /* MailObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				3D80B6C02225CDA1003FF215 /* ViewController.swift */,
 				3D80B6C22225CDA1003FF215 /* Main.storyboard */,
 				3D0583EF225DAFB800A9E928 /* ConfirmationPage.swift */,
+				EAEEB097225DB6AD001DD9E2 /* MailObject.swift */,
 				3D0583ED225D927500A9E928 /* pastMeetingsInfoPage.swift */,
 				3D77DE8B224D3B6600D7C960 /* site.swift */,
 				3D77DE89224D3AE400D7C960 /* dateAndTime.swift */,
@@ -183,6 +186,7 @@
 				3D77DE8A224D3AE400D7C960 /* dateAndTime.swift in Sources */,
 				EA46C84B2243EAD700B134F4 /* topic.swift in Sources */,
 				3D3F66C0222F1D0100D065FF /* SafetyTalksTableViewController.swift in Sources */,
+				EAEEB098225DB6AD001DD9E2 /* MailObject.swift in Sources */,
 				3D0583F0225DAFB800A9E928 /* ConfirmationPage.swift in Sources */,
 				EA46C84922416C6400B134F4 /* SignaturePage.swift in Sources */,
 			);
