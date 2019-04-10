@@ -20,13 +20,17 @@ class site: UIViewController {
     
     @IBAction func topicField(_ sender: Any) {
         (sender as AnyObject).resignFirstResponder()
+        myMeeting.site = input.text!
+        print(myMeeting.site)
     }
 
+    @IBOutlet weak var input: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("site")
-        print(myMeeting.topic)
-        print(myMeeting.date)
+        //print("site")
+        //print(myMeeting.topic)
+        //print(myMeeting.date)
 
         // Do any additional setup after loading the view.
     }

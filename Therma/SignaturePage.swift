@@ -22,6 +22,16 @@ class SignaturePage: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func supervisorField(_ sender: Any) {
+        (sender as AnyObject).resignFirstResponder()
+        myMeeting.supervisor = supervisorInput.text!
+        print(myMeeting.supervisor)
+    }
+    
+    @IBOutlet weak var supervisorInput: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

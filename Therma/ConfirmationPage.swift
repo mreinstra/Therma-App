@@ -11,9 +11,25 @@ import UIKit
 class ConfirmationPage: UIViewController {
     
     var myMeeting = info()
+    
+    @IBAction func doneButton()
+    {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let topic = myMeeting.topic
+        let date = myMeeting.date
+        let site = myMeeting.site
+        let supervisor = myMeeting.supervisor
+        
+//        print("confirmation page")
+//        print(myMeeting.topic)
+//        print(myMeeting.date)
+//        print(myMeeting.site)
+//        print(myMeeting.supervisor)
 
         // Do any additional setup after loading the view.
     }
