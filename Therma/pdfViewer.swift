@@ -14,22 +14,34 @@ class pdfViewer: UIViewController {
 
     
     @IBOutlet weak var nameLabel: UILabel!
-    var link:String = "http://safety.therma.com/wp-content/uploads/sites/2/2019/03/GOOD-HOUSEKEEPING.txt"
+    
+    @IBOutlet weak var viewer: WKWebView!
+    
     var name:String = ""
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        let url = URL(string: "http://safety.therma.com")
-        let request = URLRequest(url: url!)
-        //pdfView.load(request)
-        let pdfURL = URL(string: String(link))
-        let myRequest = URLRequest(url: pdfURL!)
-        print(myRequest)
-        //pdfView.load(myRequest)
+        let link = getLink(name: name)
+       
+        viewer.load(NSURLRequest(url: NSURL(string: link)! as URL) as URLRequest)
+
+
         nameLabel.text = name
         print(name)
         
+    }
+    
+    func getLink(name:String) -> String
+    {
+        let start = "https://safety.therma.com/wp-content/uploads/sites/2/2019/03/"
+        let end = ".txt"
+        let newName = name.replacingOccurrences(of: " ", with: "-")
+        
+        let link = start + newName + end
+        print(link)
+        
+        return(link)
     }
     
     override func viewWillAppear(_ animated: Bool) {
