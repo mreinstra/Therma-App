@@ -17,6 +17,12 @@ class SafetyTalksTableViewController: UITableViewController{
     var links = [String]()
     var dataTask: URLSessionDataTask?
     
+    @IBAction func doneButton()
+    {
+        print("clicked")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         links.append(String("Loading..."))
@@ -157,6 +163,7 @@ class SafetyTalksTableViewController: UITableViewController{
             }
         }
     }
+    
     
 }
 

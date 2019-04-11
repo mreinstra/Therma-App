@@ -12,6 +12,7 @@ import MessageUI
 class ConfirmationPage: UIViewController {
     
     var myMeeting = info()
+    var toSend = ""
     
     @IBAction func doneButton()
     {
@@ -25,7 +26,7 @@ class ConfirmationPage: UIViewController {
         let date = myMeeting.date
         let site = myMeeting.site
         let supervisor = myMeeting.supervisor
-        let toSend = String(topic) + " " + String(date) + " " + String(site) + " " + String(supervisor)
+        toSend = String(topic) + " " + String(date) + " " + String(site) + " " + String(supervisor)
         print(toSend)
 //        print("confirmation page")
 //        print(myMeeting.topic)
@@ -36,6 +37,7 @@ class ConfirmationPage: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+
     @IBAction func sendEmailButton(sender: AnyObject) {
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {

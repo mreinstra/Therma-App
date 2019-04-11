@@ -12,6 +12,7 @@
 		3D2EF5AC2231A6A100C0E5CC /* pdfViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EF5AB2231A6A100C0E5CC /* pdfViewer.swift */; };
 		3D3F66BE222F1BB600D065FF /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F66BD222F1BB600D065FF /* info.swift */; };
 		3D3F66C0222F1D0100D065FF /* SafetyTalksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F66BF222F1D0100D065FF /* SafetyTalksTableViewController.swift */; };
+		3D5C6E62225EDD910009C33F /* PastMeetingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C6E61225EDD910009C33F /* PastMeetingsTableViewController.swift */; };
 		3D73924E224AC74100F7EAD1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D73924D224AC74100F7EAD1 /* WebKit.framework */; };
 		3D77DE8A224D3AE400D7C960 /* dateAndTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D77DE89224D3AE400D7C960 /* dateAndTime.swift */; };
 		3D77DE8C224D3B6600D7C960 /* site.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D77DE8B224D3B6600D7C960 /* site.swift */; };
@@ -31,6 +32,7 @@
 		3D2EF5AB2231A6A100C0E5CC /* pdfViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdfViewer.swift; sourceTree = "<group>"; };
 		3D3F66BD222F1BB600D065FF /* info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
 		3D3F66BF222F1D0100D065FF /* SafetyTalksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyTalksTableViewController.swift; sourceTree = "<group>"; };
+		3D5C6E61225EDD910009C33F /* PastMeetingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastMeetingsTableViewController.swift; sourceTree = "<group>"; };
 		3D73924D224AC74100F7EAD1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3D77DE89224D3AE400D7C960 /* dateAndTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateAndTime.swift; sourceTree = "<group>"; };
 		3D77DE8B224D3B6600D7C960 /* site.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = site.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				3D3F66BD222F1BB600D065FF /* info.swift */,
 				3D3F66BF222F1D0100D065FF /* SafetyTalksTableViewController.swift */,
 				3D2EF5AB2231A6A100C0E5CC /* pdfViewer.swift */,
+				3D5C6E61225EDD910009C33F /* PastMeetingsTableViewController.swift */,
 			);
 			path = Therma;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				3D3F66C0222F1D0100D065FF /* SafetyTalksTableViewController.swift in Sources */,
 				EAEEB098225DB6AD001DD9E2 /* MailObject.swift in Sources */,
 				3D0583F0225DAFB800A9E928 /* ConfirmationPage.swift in Sources */,
+				3D5C6E62225EDD910009C33F /* PastMeetingsTableViewController.swift in Sources */,
 				EA46C84922416C6400B134F4 /* SignaturePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
