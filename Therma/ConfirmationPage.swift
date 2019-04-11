@@ -42,6 +42,8 @@ class ConfirmationPage: UIViewController {
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
             present(mailComposeViewController, animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
+            
         } else {
             showSendMailErrorAlert()
         }
@@ -66,6 +68,7 @@ class ConfirmationPage: UIViewController {
         mailComposerVC.setMessageBody(String(toSend), isHTML: false)
         
         return mailComposerVC
+        
     }
     
     func showSendMailErrorAlert() {
