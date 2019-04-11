@@ -42,11 +42,12 @@ class ConfirmationPage: UIViewController {
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
             present(mailComposeViewController, animated: true, completion: nil)
-            self.dismiss(animated: true, completion: nil)
+           // self.dismiss(animated: true, completion: nil)
             
         } else {
             showSendMailErrorAlert()
         }
+        
     }
 
     /*
@@ -81,8 +82,18 @@ class ConfirmationPage: UIViewController {
     // MARK: MFMailComposeViewControllerDelegate Method
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
+        
+        
     }
     
+    @IBAction func sendEmailButtonTapped(sender: AnyObject) {
+        let mailComposeViewController = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            self.showSendMailErrorAlert()
+        }
+    }
     
     // MARK: - Sharing Data with other Apps
     
@@ -109,6 +120,7 @@ class ConfirmationPage: UIViewController {
                                             UIActivity.ActivityType.saveToCameraRoll ]
         
         present(sharingVC, animated: true)
+        
     }
 
 }
