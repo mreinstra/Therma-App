@@ -155,7 +155,7 @@ class SafetyTalksTableViewController: UITableViewController{
         if segue.destination is pdfViewer
         {
             let vc = segue.destination as? pdfViewer
-            
+
             if let myCell = sender as? UITableViewCell
             {
                 let label = myCell.viewWithTag(1000) as! UILabel
