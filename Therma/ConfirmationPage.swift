@@ -40,7 +40,9 @@ class ConfirmationPage: UIViewController {
         //print(toSend)
         
         subject = String(date) + ", " + String(site) + ", " + String(topic)
-        body = "Supervisor: " + String(supervisor) + "\n" + "Site: " + String(site) + "\n" + "Additional Notes: " + String(notes) + "\n" + "Also need attendees, signatures, photo, and text of safety meeting" + "\n\n" + "Meeting Text: " + String(meetingText)
+        
+        let imageData = getSavedImage(named: "FirstSignature")!.pngData()
+        body = "Supervisor: " + String(supervisor) + "\n" + "Site: " + String(site) + "\n" + "Additional Notes: " + String(notes) + "\n" + "Also need attendees, signatures, photo, and text of safety meeting" + "\n\n" + "Meeting Text: " + String(meetingText) + imageData
         print(body)
 
         // Do any additional setup after loading the view.
@@ -77,8 +79,8 @@ class ConfirmationPage: UIViewController {
         mailComposerVC.setSubject("About your grade...")
         mailComposerVC.setMessageBody(String(toSend), isHTML: false)
         
-        let imageData: NSData = getSavedImage(named: "FirstSignature")!.pngData()! as NSData
-        mailComposerVC.addAttachmentData(imageData as Data, mimeType: "image/png", fileName: "imageName.png")
+        let imageData = getSavedImage(named: "FirstSignature")!.pngData()
+        mailComposerVC.addAttachmentData(imageData!, mimeType: "image/png", fileName: "FirstSignature")
         print(mailComposerVC)
         
         return mailComposerVC
