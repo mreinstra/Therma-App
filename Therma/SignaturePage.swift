@@ -28,9 +28,15 @@ class SignaturePage: UIViewController {
         print(myMeeting.supervisor)
     }
     
+    
+    
     @IBOutlet weak var supervisorInput: UITextField!
     
-    
+    @IBAction func shareData()
+    {
+        myMeeting.supervisor = supervisorInput.text!
+        print(myMeeting.supervisor)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,9 +154,10 @@ class SignaturePage: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.destination is ConfirmationPage
+        myMeeting.supervisor = supervisorInput.text!
+        if segue.destination is Notes
         {
-            let vc = segue.destination as? ConfirmationPage
+            let vc = segue.destination as? Notes
             
             vc?.myMeeting = myMeeting
         }

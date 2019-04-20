@@ -15,4 +15,17 @@ class info: NSObject
     var supervisor = ""
     var site = ""
     var signatures = [String]()
+    var notes = ""
+    var meetingText = ""
+    
+    func toString()
+    {
+        print("topic: " + topic)
+        print("date: " + date)
+        print("supervisor: " + supervisor)
+        print("site: " + site)
+        print("notes: " + notes)
+        print("meetingText: " + meetingText)
+        //print("signatures: " + signatures)
+    }
 }

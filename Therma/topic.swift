@@ -12,6 +12,8 @@ class topic: UIViewController {
 
     
     var myMeeting = info()
+    var name: String = ""
+    var meetingString = ""
     
     @IBAction func topicField(_ sender: Any) {
         (sender as AnyObject).resignFirstResponder()
@@ -25,11 +27,18 @@ class topic: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func shareData()
+    {
+        myMeeting.topic = input.text!
+    }
+    
     
     @IBOutlet weak var input: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        input.text = name
+        myMeeting.meetingText = meetingString
         
         // Do any additional setup after loading the view.
     }

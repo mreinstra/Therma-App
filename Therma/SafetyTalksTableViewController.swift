@@ -11,17 +11,12 @@ import WebKit
 
 
 
-class SafetyTalksTableViewController: UITableViewController{
-    
+import UIKit
+
+class SafetyTalksTableViewController: UITableViewController {
     
     var links = [String]()
     var dataTask: URLSessionDataTask?
-    
-    @IBAction func doneButton()
-    {
-        print("clicked")
-        self.dismiss(animated: true, completion: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,15 +35,14 @@ class SafetyTalksTableViewController: UITableViewController{
         var myList = [String]()
         do
         {
-            let regex = try NSRegularExpression(pattern: "<h2 class=\"entry-title\">([a-z ]*)</h2>", options: NSRegularExpression.Options.caseInsensitive)
-            
-            //"<h2 class=\"entry-title\">[a-z]*</h2>"
-            
+            let regex = try NSRegularExpression(pattern: "<a .*? href=\"(.*?)\">Download", options: NSRegularExpression.Options.caseInsensitive)
             
             // More about using NSRegularExpression can be found here:
             //    https://developer.apple.com/documentation/foundation/nsregularexpression
             
             let matches = regex.matches(in: data, options: [], range: NSRange(location: 0, length: data.utf16.count))
+            //print("count:")
+            //print(matches.count)
             for match in matches
             {
                 let range = match.range(at: 1)
@@ -66,9 +60,6 @@ class SafetyTalksTableViewController: UITableViewController{
         {
             print("RegEx error!")
         }
-        //        print("here's the list")
-        print(myList)
-        //        print("end of list")
         return myList
     }
     
@@ -83,9 +74,6 @@ class SafetyTalksTableViewController: UITableViewController{
     func getLinks() {
         let myURL = URL(string: String("https://safety.therma.com/category/Toolbox-Meetings-Text-Files/"))
         var myRequest = URLRequest(url: myURL!)
-        //        print("HI")
-        //        print(myURL)
-        //        print("BYE")
         // To use the post method or customize the headers, look at the URLRequest documentation: https://developer.apple.com/documentation/foundation/urlrequest
         // Some examples:
         //    myRequest.httpMethod = "POST"
@@ -102,6 +90,7 @@ class SafetyTalksTableViewController: UITableViewController{
                 {
                     if let myhtml = String(data: data!, encoding: .utf8)
                     {
+                        //print(myhtml)
                         self.links = self.parse(data: myhtml)
                         DispatchQueue.main.async
                             {
@@ -138,7 +127,11 @@ class SafetyTalksTableViewController: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "pdf", for: indexPath)
         let link = links[indexPath.row]
         let label = cell.viewWithTag(1000) as! UILabel
-        label.text = link
+        var workingStr = link.replacingOccurrences(of: "https://safety.therma.com/", with: "")
+        workingStr = workingStr.replacingOccurrences(of: "/", with: "")
+        workingStr = workingStr.replacingOccurrences(of: "-", with: " ")
+        print(workingStr)
+        label.text = workingStr
         return cell
     }
     
@@ -150,15 +143,47 @@ class SafetyTalksTableViewController: UITableViewController{
         return false
     }
     
+    
+    /*
+     // Override to support editing the table view.
+     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+     if editingStyle == .delete {
+     // Delete the row from the data source
+     tableView.deleteRows(at: [indexPath], with: .fade)
+     } else if editingStyle == .insert {
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
+     }
+     */
+    
+    /*
+     // Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     }
+     */
+    
+    /*
+     // Override to support conditional rearranging of the table view.
+     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.destination is pdfViewer
         {
             let vc = segue.destination as? pdfViewer
-
+            
             if let myCell = sender as? UITableViewCell
             {
                 let label = myCell.viewWithTag(1000) as! UILabel
+                //print("https://safety.therma.com/" + label.text!.replacingOccurrences(of: " ", with: "-") + "/")
+                vc?.link = "https://safety.therma.com/" + label.text!.replacingOccurrences(of: " ", with: "-") + "/"
                 vc?.name = label.text!
             }
         }
@@ -166,6 +191,7 @@ class SafetyTalksTableViewController: UITableViewController{
     
     
 }
+
 
 
 

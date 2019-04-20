@@ -1,16 +1,15 @@
 //
-//  site.swift
+//  Notes.swift
 //  Therma
 //
-//  Created by Meg Reinstra on 3/28/19.
+//  Created by Meg Reinstra on 4/19/19.
 //  Copyright © 2019 Meg Reinstra. All rights reserved.
 //
 
 import UIKit
 
-class site: UIViewController {
-    
-    
+class Notes: UIViewController {
+
     var myMeeting = info()
     
     @IBAction func doneButton()
@@ -20,15 +19,15 @@ class site: UIViewController {
     
     @IBAction func topicField(_ sender: Any) {
         (sender as AnyObject).resignFirstResponder()
-        myMeeting.site = input.text!
-        print(myMeeting.site)
+        myMeeting.notes = input.text!
+        print(myMeeting.notes)
     }
     
     @IBAction func shareData()
     {
-        myMeeting.site = input.text!
+        myMeeting.notes = input.text!
     }
-
+    
     @IBOutlet weak var input: UITextField!
     
     override func viewDidLoad() {
@@ -36,31 +35,33 @@ class site: UIViewController {
         //print("site")
         //print(myMeeting.topic)
         //print(myMeeting.date)
-
+        
         // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.destination is SignaturePage
+        myMeeting.notes = input.text!
+        if segue.destination is ConfirmationPage
         {
-            let vc = segue.destination as? SignaturePage
+            let vc = segue.destination as? ConfirmationPage
             
             vc?.myMeeting = myMeeting
         }
     }
     
-   
     
-
+    
+    
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

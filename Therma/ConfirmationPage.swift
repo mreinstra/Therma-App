@@ -13,6 +13,8 @@ class ConfirmationPage: UIViewController {
     
     var myMeeting = info()
     var toSend = ""
+    var subject = ""
+    var body = ""
     
     @IBAction func doneButton()
     {
@@ -26,13 +28,15 @@ class ConfirmationPage: UIViewController {
         let date = myMeeting.date
         let site = myMeeting.site
         let supervisor = myMeeting.supervisor
+        let notes = myMeeting.notes
+        let meetingText = myMeeting.meetingText
+        myMeeting.toString()
         toSend = String(topic) + " " + String(date) + " " + String(site) + " " + String(supervisor)
-        print(toSend)
-//        print("confirmation page")
-//        print(myMeeting.topic)
-//        print(myMeeting.date)
-//        print(myMeeting.site)
-//        print(myMeeting.supervisor)
+        //print(toSend)
+        
+        subject = String(date) + ", " + String(site) + ", " + String(topic)
+        body = "Supervisor: " + String(supervisor) + "\n" + "Site: " + String(site) + "\n" + "Additional Notes: " + String(notes) + "\n" + "Also need attendees, signatures, photo, and text of safety meeting" + "\n\n" + "Meeting Text: " + String(meetingText)
+        print(body)
 
         // Do any additional setup after loading the view.
     }
@@ -99,7 +103,7 @@ class ConfirmationPage: UIViewController {
     
     @IBAction func shareMailData()
     {
-        let mailData = MailObject(subjectLine: "About your grade...", messageBody: "Embrace the learning experience!")
+        let mailData = MailObject(subjectLine: subject, messageBody: body)
         let sharingVC = UIActivityViewController(activityItems: [mailData], applicationActivities: nil)
         
         // want to force it to only share with mail apps? Then restrict everything else, thusly:

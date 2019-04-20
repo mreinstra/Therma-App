@@ -15,15 +15,23 @@ class pdfViewer: UIViewController {
     var link:String?
     var dataTask: URLSessionDataTask?
     var name:String = ""
+    var meetingString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = name
+        
         
         if let gotURL = link
         {
             getPage(url: gotURL)
         }
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func doneButton()
+    {
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Helper Functions
@@ -77,6 +85,7 @@ class pdfViewer: UIViewController {
     
     func getPage(url : String) {
         let myURL = URL(string: url)
+        print(myURL)
         var myRequest = URLRequest(url: myURL!)
         // To use the post method or customize the headers, look at the URLRequest documentation: https://developer.apple.com/documentation/foundation/urlrequest
         // Some examples:
@@ -137,6 +146,7 @@ class pdfViewer: UIViewController {
                             {
                                 self.linkTextView.text = myhtml
                         }
+                        self.meetingString = myhtml
                     }
                     else{
                         print("no string data!")
@@ -154,7 +164,20 @@ class pdfViewer: UIViewController {
                 }
         })
         dataTask?.resume()
+        
+        
+    
 }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is topic
+        {
+            let vc = segue.destination as? topic
+            
+            vc?.name = name
+            vc?.meetingString = meetingString
+        }
+    }
 
 /*
  // MARK: - Navigation
