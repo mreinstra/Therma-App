@@ -77,7 +77,12 @@ class ConfirmationPage: UIViewController {
         mailComposerVC.setSubject("About your grade...")
         mailComposerVC.setMessageBody(String(toSend), isHTML: false)
         
+        let imageData: NSData = getSavedImage(named: "FirstSignature")!.pngData()! as NSData
+        mailComposerVC.addAttachmentData(imageData as Data, mimeType: "image/png", fileName: "imageName.png")
+        print(mailComposerVC)
+        
         return mailComposerVC
+        
         
     }
     
@@ -108,6 +113,7 @@ class ConfirmationPage: UIViewController {
     
     @IBAction func shareMailData()
     {
+        
         let mailData = MailObject(subjectLine: subject, messageBody: body)
         let sharingVC = UIActivityViewController(activityItems: [mailData], applicationActivities: nil)
         
@@ -132,4 +138,11 @@ class ConfirmationPage: UIViewController {
         
     }
 
+    func getSavedImage(named: String) -> UIImage? {
+        if let dir = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) {
+            return UIImage(contentsOfFile: URL(fileURLWithPath: dir.absoluteString).appendingPathComponent(named).path)
+        }
+        return nil
+    }
+    
 }

@@ -111,7 +111,10 @@ class SignaturePage: UIViewController {
     
     @IBAction func save()
     {
-        UIGraphicsBeginImageContext(view.frame.size)
+       // I added this code to try saving to the directory. (See saveImage function below)
+        
+        
+UIGraphicsBeginImageContext(view.frame.size)
         if let context = UIGraphicsGetCurrentContext() {
             drawingImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
             if let myImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -119,6 +122,8 @@ class SignaturePage: UIViewController {
                 UIImageWriteToSavedPhotosAlbum(myImage, nil, nil, nil)
                 // or do something else with the image here.
             }
+            // I ADDED THIS LINE:
+            saveImage(imageName: "FirstSignature", image: UIGraphicsGetImageFromCurrentImageContext()!)
             UIGraphicsEndImageContext()
         }
     }
