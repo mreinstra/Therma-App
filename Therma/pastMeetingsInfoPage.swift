@@ -60,7 +60,8 @@ class pastMeetingsInfoPage: UIViewController {
     
     @IBAction func shareMailData()
     {
-        let mailData = MailObject(subjectLine: subject, messageBody: body)
+        let image = getSavedImage(named: "FirstSignature")!
+        let mailData = MailObject(subjectLine: subject, messageBody: body, attachment: image)
         let sharingVC = UIActivityViewController(activityItems: [mailData], applicationActivities: nil)
         
         // want to force it to only share with mail apps? Then restrict everything else, thusly:
@@ -82,6 +83,13 @@ class pastMeetingsInfoPage: UIViewController {
         
         present(sharingVC, animated: true)
         
+    }
+    
+    func getSavedImage(named: String) -> UIImage? {
+        if let dir = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) {
+            return UIImage(contentsOfFile: URL(fileURLWithPath: dir.absoluteString).appendingPathComponent(named).path)
+        }
+        return nil
     }
     
     

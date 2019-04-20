@@ -15,11 +15,13 @@ class MailObject: NSObject, UIActivityItemSource
 {
     var subject = ""
     var message = ""
+    var image = UIImage()
     
-    init(subjectLine: String, messageBody: String)
+    init(subjectLine: String, messageBody: String, attachment: UIImage)
     {
         subject = subjectLine
         message = messageBody
+        image = attachment
     }
     
     func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
@@ -34,6 +36,10 @@ class MailObject: NSObject, UIActivityItemSource
                                 subjectForActivityType activityType: UIActivity.ActivityType?) -> String
     {
         return subject
+    }
+    
+    func activityViewController(_ activityViewController: UIActivityViewController, thumbnailImageForActivityType activityType: UIActivity.ActivityType?, suggestedSize size: CGSize) -> UIImage? {
+        return image
     }
     
 }

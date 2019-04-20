@@ -42,7 +42,7 @@ class ConfirmationPage: UIViewController {
         subject = String(date) + ", " + String(site) + ", " + String(topic)
         
         let imageData = getSavedImage(named: "FirstSignature")!.pngData()
-        body = "Supervisor: " + String(supervisor) + "\n" + "Site: " + String(site) + "\n" + "Additional Notes: " + String(notes) + "\n" + "Also need attendees, signatures, photo, and text of safety meeting" + "\n\n" + "Meeting Text: " + String(meetingText) + imageData
+        body = "Supervisor: " + String(supervisor) + "\n" + "Site: " + String(site) + "\n" + "Additional Notes: " + String(notes) + "\n" + "Also need attendees, signatures, photo, and text of safety meeting" + "\n\n" + "Meeting Text: " + String(meetingText)
         print(body)
 
         // Do any additional setup after loading the view.
@@ -115,8 +115,9 @@ class ConfirmationPage: UIViewController {
     
     @IBAction func shareMailData()
     {
+        let image = getSavedImage(named: "FirstSignature")!
+        let mailData = MailObject(subjectLine: subject, messageBody: body, attachment: image)
         
-        let mailData = MailObject(subjectLine: subject, messageBody: body)
         let sharingVC = UIActivityViewController(activityItems: [mailData], applicationActivities: nil)
         
         // want to force it to only share with mail apps? Then restrict everything else, thusly:
