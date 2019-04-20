@@ -90,12 +90,21 @@
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jlT-gR-sVq">
+                            <tableViewCell clipsSubviews="YES" tag="40" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pastMeeting" id="jlT-gR-sVq">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jlT-gR-sVq" id="o3d-VZ-SU4">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="400" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU6-8M-XbH">
+                                            <rect key="frame" x="52" y="0.0" width="246" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="Ead-2q-fsW" kind="presentation" id="jdr-Hr-KBz"/>
@@ -110,7 +119,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDR-bg-WAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="-602"/>
+            <point key="canvasLocation" x="900" y="-602.24887556221893"/>
         </scene>
         <!--Past Meetings Info Page-->
         <scene sceneID="q7E-T6-dm8">
@@ -140,10 +149,21 @@
                                     <action selector="doneButton" destination="zMX-bH-TbM" eventType="touchUpInside" id="fJi-cq-vUs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zc2-pf-drY">
+                                <rect key="frame" x="130" y="318" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send Email"/>
+                                <connections>
+                                    <action selector="shareMailData" destination="Ead-2q-fsW" eventType="touchUpInside" id="3j4-8S-rJl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PaB-If-Q1L"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="fXS-ei-3I8" id="Jw7-fv-IUp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMn-AI-QFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,6 +200,9 @@
                                                 <action selector="doneButton" destination="PxW-qH-aFj" eventType="touchUpInside" id="oGz-BV-xtF"/>
                                             </connections>
                                         </button>
+                                        <connections>
+                                            <action selector="doneButton" destination="PxW-qH-aFj" id="FPB-O7-2Rb"/>
+                                        </connections>
                                     </barButtonItem>
                                 </navigationItem>
                             </items>
@@ -260,7 +283,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="595"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -535,10 +558,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdi-qr-jvX">
-                                <rect key="frame" x="152" y="318" width="71" height="30"/>
+                                <rect key="frame" x="141" y="318" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Over"/>
+                                <state key="normal" title="Save Meeting"/>
                                 <connections>
+                                    <action selector="saveMeeting" destination="coc-oH-pTZ" eventType="touchUpInside" id="ryd-PV-0tG"/>
                                     <segue destination="qe5-aL-DQo" kind="unwind" unwindAction="unwindWithSegue:" id="puY-hT-3jG"/>
                                 </connections>
                             </button>
@@ -556,9 +580,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sv2-va-W2m">
-                                <rect key="frame" x="167" y="407" width="40" height="30"/>
+                                <rect key="frame" x="149" y="407" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share"/>
+                                <state key="normal" title="Send Email"/>
                                 <connections>
                                     <action selector="shareMailData" destination="coc-oH-pTZ" eventType="touchUpInside" id="zVi-5i-dZZ"/>
                                 </connections>

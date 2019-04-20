@@ -20,6 +20,11 @@ class ConfirmationPage: UIViewController {
     {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func saveMeeting()
+    {
+        print("meeting saved!!!")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

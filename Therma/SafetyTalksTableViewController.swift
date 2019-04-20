@@ -24,6 +24,11 @@ class SafetyTalksTableViewController: UITableViewController {
         getLinks()
     }
     
+    @IBAction func doneButton()
+    {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: - Internet Helper Functions
     func parse(data: String) -> [String] {
         /* This example uses regular expressions, if you'd prefer

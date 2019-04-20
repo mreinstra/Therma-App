@@ -9,9 +9,14 @@
 import UIKit
 
 class PastMeetingsTableViewController: UITableViewController {
+    
+    var meetings = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        meetings.append("test1")
+        meetings.append("test2")
+        meetings.append("test3")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -19,17 +24,19 @@ class PastMeetingsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return meetings.count
     }
     
     @IBAction func doneButton()
@@ -37,15 +44,16 @@ class PastMeetingsTableViewController: UITableViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pastMeeting", for: indexPath)
 
-        // Configure the cell...
-
+        let meeting = meetings[indexPath.row]
+        let label = cell.viewWithTag(400) as! UILabel
+        label.text = meeting
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +99,19 @@ class PastMeetingsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is pastMeetingsInfoPage
+        {
+            let vc = segue.destination as? pastMeetingsInfoPage
+            
+            if let myCell = sender as? UITableViewCell
+            {
+                let label = myCell.viewWithTag(400) as! UILabel
+                vc?.name = label.text!
+            }
+        }
+    }
 
 }
