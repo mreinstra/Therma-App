@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class info: NSObject
 {
@@ -17,6 +18,7 @@ class info: NSObject
     var signatures = [String]()
     var notes = ""
     var meetingText = ""
+    var photo = UIImage()
     
     func toString()
     {

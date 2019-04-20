@@ -22,6 +22,7 @@
 		3D80B6C62225CDA3003FF215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D80B6C52225CDA3003FF215 /* Assets.xcassets */; };
 		3D80B6C92225CDA3003FF215 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D80B6C72225CDA3003FF215 /* LaunchScreen.storyboard */; };
 		3DC20529226A939E00470321 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC20528226A939E00470321 /* Notes.swift */; };
+		3DC2052B226ABAE900470321 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC2052A226ABAE900470321 /* Camera.swift */; };
 		EA46C84922416C6400B134F4 /* SignaturePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46C84822416C6400B134F4 /* SignaturePage.swift */; };
 		EA46C84B2243EAD700B134F4 /* topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46C84A2243EAD700B134F4 /* topic.swift */; };
 		EAEEB098225DB6AD001DD9E2 /* MailObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEEB097225DB6AD001DD9E2 /* MailObject.swift */; };
@@ -45,6 +46,7 @@
 		3D80B6C82225CDA3003FF215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D80B6CA2225CDA3003FF215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DC20528226A939E00470321 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		3DC2052A226ABAE900470321 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		EA46C84822416C6400B134F4 /* SignaturePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignaturePage.swift; sourceTree = "<group>"; };
 		EA46C84A2243EAD700B134F4 /* topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topic.swift; sourceTree = "<group>"; };
 		EAEEB097225DB6AD001DD9E2 /* MailObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailObject.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				3D80B6C02225CDA1003FF215 /* ViewController.swift */,
 				3DC20528226A939E00470321 /* Notes.swift */,
 				3D80B6C22225CDA1003FF215 /* Main.storyboard */,
+				3DC2052A226ABAE900470321 /* Camera.swift */,
 				3D0583EF225DAFB800A9E928 /* ConfirmationPage.swift */,
 				EAEEB097225DB6AD001DD9E2 /* MailObject.swift */,
 				3D0583ED225D927500A9E928 /* pastMeetingsInfoPage.swift */,
@@ -194,6 +197,7 @@
 				EA46C84B2243EAD700B134F4 /* topic.swift in Sources */,
 				3D3F66C0222F1D0100D065FF /* SafetyTalksTableViewController.swift in Sources */,
 				EAEEB098225DB6AD001DD9E2 /* MailObject.swift in Sources */,
+				3DC2052B226ABAE900470321 /* Camera.swift in Sources */,
 				3D0583F0225DAFB800A9E928 /* ConfirmationPage.swift in Sources */,
 				3D5C6E62225EDD910009C33F /* PastMeetingsTableViewController.swift in Sources */,
 				EA46C84922416C6400B134F4 /* SignaturePage.swift in Sources */,
