@@ -15,6 +15,8 @@ class ConfirmationPage: UIViewController {
     var toSend = ""
     var subject = ""
     var body = ""
+    var trueBody = ""
+    var image = UIImage()
     
     @IBAction func doneButton()
     {
@@ -24,8 +26,32 @@ class ConfirmationPage: UIViewController {
     @IBAction func saveMeeting()
     {
         print("meeting saved!!!")
+        let file = "file.txt" //this is the file. we will write to and read from it
+        
+        let text = " hello " //just a text
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let fileURL = dir.appendingPathComponent(file)
+            
+            //writing
+            do {
+                try text.write(to: fileURL, atomically: false, encoding: .utf8)
+            }
+            catch {print("well crap")}
+            
+            //reading
+            do {
+                let text2 = try String(contentsOf: fileURL, encoding: .utf8)
+                print(text2)
+            }
+            catch {print("nice try")}
+        }
+        print("finished")
     }
 
+    @IBOutlet weak var imageView: UIImageView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,24 +68,30 @@ class ConfirmationPage: UIViewController {
         subject = String(date) + ", " + String(site) + ", " + String(topic)
         
         let imageData = getSavedImage(named: "FirstSignature")!.pngData()
-        body = "Supervisor: " + String(supervisor) + "\n" + "Site: " + String(site) + "\n" + "Additional Notes: " + String(notes) + "\n" + "Also need attendees, signatures, photo, and text of safety meeting" + "\n\n" + "Meeting Text: " + String(meetingText)
+        body = "Supervisor: " + String(supervisor) + "\n" + "Site: " + String(site) + "\n" + "Additional Notes: " + String(notes) + "\n" + "Also need attendees, signatures, and photo" + "\n\n\n\n" + "Meeting Text: " + String(meetingText)
         print(body)
+        
+        trueBody = "Please copy the following text into the subject line: " + subject + "\n\n" + body
+        
+        image = getSavedImage(named: "FirstSignature")!
+        myMeeting.image_signatures.append(image)
+        imageView.image = myMeeting.image_signatures[0]
 
         // Do any additional setup after loading the view.
     }
     
 
-    @IBAction func sendEmailButton(sender: AnyObject) {
-        let mailComposeViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
-            present(mailComposeViewController, animated: true, completion: nil)
-           // self.dismiss(animated: true, completion: nil)
-            
-        } else {
-            showSendMailErrorAlert()
-        }
-        
-    }
+//    @IBAction func sendEmailButton(sender: AnyObject) {
+//        let mailComposeViewController = configuredMailComposeViewController()
+//        if MFMailComposeViewController.canSendMail() {
+//            present(mailComposeViewController, animated: true, completion: nil)
+//           // self.dismiss(animated: true, completion: nil)
+//
+//        } else {
+//            showSendMailErrorAlert()
+//        }
+//
+//    }
 
     /*
     // MARK: - Navigation
@@ -71,52 +103,51 @@ class ConfirmationPage: UIViewController {
     }
     */
     
-    func configuredMailComposeViewController() -> MFMailComposeViewController {
-        let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
-        
-        mailComposerVC.setToRecipients(["charlie.donnelly@menloschool.org"])
-        mailComposerVC.setSubject("About your grade...")
-        mailComposerVC.setMessageBody(String(toSend), isHTML: false)
-        
-        let imageData = getSavedImage(named: "FirstSignature")!.pngData()
-        mailComposerVC.addAttachmentData(imageData!, mimeType: "image/png", fileName: "FirstSignature")
-        print(mailComposerVC)
-        
-        return mailComposerVC
-        
-        
-    }
+//    func configuredMailComposeViewController() -> MFMailComposeViewController {
+//        let mailComposerVC = MFMailComposeViewController()
+//        mailComposerVC.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+//
+//        mailComposerVC.setToRecipients(["charlie.donnelly@menloschool.org"])
+//        mailComposerVC.setSubject("About your grade...")
+//        mailComposerVC.setMessageBody(String(toSend), isHTML: false)
+//
+//        let imageData = getSavedImage(named: "FirstSignature")!.pngData()
+//        mailComposerVC.addAttachmentData(imageData!, mimeType: "image/png", fileName: "FirstSignature")
+//        print(mailComposerVC)
+//
+//        return mailComposerVC
+//
+//
+//    }
     
-    func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
-        let  OKaction = UIAlertAction (title: "OK" , style: .default , handler: nil )
-        sendMailErrorAlert.addAction(OKaction)
-        present(sendMailErrorAlert, animated: true , completion: nil)
-    }
+//    func showSendMailErrorAlert() {
+//        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
+//        let  OKaction = UIAlertAction (title: "OK" , style: .default , handler: nil )
+//        sendMailErrorAlert.addAction(OKaction)
+//        present(sendMailErrorAlert, animated: true , completion: nil)
+//    }
+//
+//    // MARK: MFMailComposeViewControllerDelegate Method
+//    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+//        controller.dismiss(animated: true, completion: nil)
+//
+//
+//    }
     
-    // MARK: MFMailComposeViewControllerDelegate Method
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
-        
-        
-    }
-    
-    @IBAction func sendEmailButtonTapped(sender: AnyObject) {
-        let mailComposeViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            self.showSendMailErrorAlert()
-        }
-    }
+//    @IBAction func sendEmailButtonTapped(sender: AnyObject) {
+//        let mailComposeViewController = configuredMailComposeViewController()
+//        if MFMailComposeViewController.canSendMail() {
+//            self.present(mailComposeViewController, animated: true, completion: nil)
+//        } else {
+//            self.showSendMailErrorAlert()
+//        }
+//    }
     
     // MARK: - Sharing Data with other Apps
     
     @IBAction func shareMailData()
     {
-        let image = getSavedImage(named: "FirstSignature")!
-        let mailData = MailObject(subjectLine: subject, messageBody: body, attachment: image)
+        let mailData = MailObject(subjectLine: subject, messageBody: trueBody, attachment: image)
         
         let sharingVC = UIActivityViewController(activityItems: [mailData], applicationActivities: nil)
         

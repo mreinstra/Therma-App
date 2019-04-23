@@ -15,7 +15,8 @@ class info: NSObject
     var date = ""
     var supervisor = ""
     var site = ""
-    var signatures = [String]()
+    var text_signatures = [String]()
+    var image_signatures = [UIImage]()
     var notes = ""
     var meetingText = ""
     var photo = UIImage()

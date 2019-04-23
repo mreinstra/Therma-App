@@ -36,7 +36,9 @@ class Camera: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
         //myMeeting.photo = info[.originalImage] as? UIImage
-        imageView.image = info[.originalImage] as? UIImage
+        //imageView.image = info[.originalImage] as? UIImage
+        myMeeting.photo = (info[.originalImage] as? UIImage)!
+        imageView.image = myMeeting.photo
     }
     
     @IBAction func photos()

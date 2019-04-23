@@ -17,6 +17,17 @@ class PastMeetingsTableViewController: UITableViewController {
         meetings.append("test1")
         meetings.append("test2")
         meetings.append("test3")
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let fileURL = dir.appendingPathComponent("file.txt")
+            
+            do {
+                let text2 = try String(contentsOf: fileURL, encoding: .utf8)
+                print(text2)
+            }
+            catch {print("nice try")}
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
