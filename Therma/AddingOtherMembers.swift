@@ -15,6 +15,17 @@ class AddingOtherMembers: UIViewController {
      var myMeeting = info()
 
     @IBOutlet weak var memberName: UITextField!
+    
+    @IBAction func topicField(_ sender: Any) {
+        (sender as AnyObject).resignFirstResponder()
+    }
+    
+    @IBAction func doneButton()
+    {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

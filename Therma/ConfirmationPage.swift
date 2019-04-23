@@ -63,6 +63,7 @@ class ConfirmationPage: UIViewController {
         let supervisor = myMeeting.supervisor
         let notes = myMeeting.notes
         let meetingText = myMeeting.meetingText
+        let textSignatures = myMeeting.text_signatures
         myMeeting.toString()
         toSend = String(topic) + " " + String(date) + " " + String(site) + " " + String(supervisor)
         //print(toSend)
@@ -72,7 +73,12 @@ class ConfirmationPage: UIViewController {
         let imageData = getSavedImage(named: "FirstSignature")!.pngData()
         
         
-        body = "Supervisor: " + String(supervisor) + "\n" + "Site: " + String(site) + "\n" + "Additional Notes: " + String(notes) + "\n" + "Also need attendees, signatures, and photo" + "\n\n\n\n" + "Meeting Text: " + String(meetingText)
+        body = "Supervisor: " + String(supervisor) + "\n" + "Site: " + String(site) + "\n" + "Additional Notes: " + String(notes)
+            
+        body = body + "\n" + "Attendees:\n" + textSignatures.joined(separator:"\n") + "\n"
+        
+        body += "Also need signatures and photo" + "\n\n\n\n" + "Meeting Text: " + String(meetingText)
+       
         print(body)
         
         trueBody = "Please copy the following text into the subject line: " + subject + "\n\n" + body
@@ -158,14 +164,11 @@ class ConfirmationPage: UIViewController {
           //  UIActivityViewController(activityItems: [string, url, image, pdf],
           //applicationActivities: nil)
         
-        let string = "Hello, world!"
-        let url = URL(string: "https://nshipster.com")!
-        let image = UIImage(named: "mustache.jpg")
-        let pdf = Bundle.main.url(forResource: "Q4 Projections",
-                                  withExtension: "pdf")
+        let string = trueBody
+        let image = myMeeting.image_signatures[0]
         
         let sharingVC =
-            UIActivityViewController(activityItems: [string, url, myMeeting.image_signatures[0]],
+            UIActivityViewController(activityItems: [string, image],
                                      applicationActivities: nil)
 
         
