@@ -25,6 +25,7 @@
 		3DC2052B226ABAE900470321 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC2052A226ABAE900470321 /* Camera.swift */; };
 		EA46C84922416C6400B134F4 /* SignaturePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46C84822416C6400B134F4 /* SignaturePage.swift */; };
 		EA46C84B2243EAD700B134F4 /* topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46C84A2243EAD700B134F4 /* topic.swift */; };
+		EA639860226F6A8E007EF7E2 /* AddingOtherMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63985F226F6A8E007EF7E2 /* AddingOtherMembers.swift */; };
 		EAEEB098225DB6AD001DD9E2 /* MailObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEEB097225DB6AD001DD9E2 /* MailObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		3DC2052A226ABAE900470321 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		EA46C84822416C6400B134F4 /* SignaturePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignaturePage.swift; sourceTree = "<group>"; };
 		EA46C84A2243EAD700B134F4 /* topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topic.swift; sourceTree = "<group>"; };
+		EA63985F226F6A8E007EF7E2 /* AddingOtherMembers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingOtherMembers.swift; sourceTree = "<group>"; };
 		EAEEB097225DB6AD001DD9E2 /* MailObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				3D77DE89224D3AE400D7C960 /* dateAndTime.swift */,
 				EA46C84A2243EAD700B134F4 /* topic.swift */,
 				EA46C84822416C6400B134F4 /* SignaturePage.swift */,
+				EA63985F226F6A8E007EF7E2 /* AddingOtherMembers.swift */,
 				3D80B6C52225CDA3003FF215 /* Assets.xcassets */,
 				3D80B6C72225CDA3003FF215 /* LaunchScreen.storyboard */,
 				3D80B6CA2225CDA3003FF215 /* Info.plist */,
@@ -193,6 +196,7 @@
 				3D2EF5AC2231A6A100C0E5CC /* pdfViewer.swift in Sources */,
 				3D80B6BF2225CDA1003FF215 /* AppDelegate.swift in Sources */,
 				3D77DE8C224D3B6600D7C960 /* site.swift in Sources */,
+				EA639860226F6A8E007EF7E2 /* AddingOtherMembers.swift in Sources */,
 				3D77DE8A224D3AE400D7C960 /* dateAndTime.swift in Sources */,
 				EA46C84B2243EAD700B134F4 /* topic.swift in Sources */,
 				3D3F66C0222F1D0100D065FF /* SafetyTalksTableViewController.swift in Sources */,

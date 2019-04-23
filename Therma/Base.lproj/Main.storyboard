@@ -488,10 +488,10 @@
             </objects>
             <point key="canvasLocation" x="4648.8000000000002" y="133.5832083958021"/>
         </scene>
-        <!--Signature Page-->
+        <!--Adding Other Members-->
         <scene sceneID="qcS-hq-PFH">
             <objects>
-                <viewController id="Hf0-gk-BPW" customClass="SignaturePage" customModule="Therma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hf0-gk-BPW" customClass="AddingOtherMembers" customModule="Therma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jbT-BL-MLk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -519,17 +519,18 @@
                                     <color key="titleColor" red="0.33725490200000002" green="0.74509803919999995" blue="1" alpha="0.78697183100000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveAddAnother:" destination="Hf0-gk-BPW" eventType="touchUpInside" id="3rL-bv-uLT"/>
+                                    <action selector="saveAddAnother:" destination="Hf0-gk-BPW" eventType="touchUpInside" id="oO1-Ig-TrN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHF-HZ-QZ6">
-                                <rect key="frame" x="163" y="464" width="54" height="39"/>
+                                <rect key="frame" x="96" y="464" width="189" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <state key="normal" title="Done">
+                                <state key="normal" title="Save and Continue">
                                     <color key="titleColor" red="0.33725490200000002" green="0.74509803919999995" blue="1" alpha="0.78697183100000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="saveAddAnother:" destination="Hf0-gk-BPW" eventType="touchUpInside" id="EH9-VC-HEQ"/>
                                     <segue destination="AaS-Fa-l6V" kind="presentation" id="JIj-Gk-1Bq"/>
                                 </connections>
                             </button>
@@ -552,7 +553,7 @@
                         <viewLayoutGuide key="safeArea" id="nH7-Mt-Y90"/>
                     </view>
                     <connections>
-                        <outlet property="memberName" destination="V3h-mk-cdA" id="Gel-WF-nRE"/>
+                        <outlet property="memberName" destination="V3h-mk-cdA" id="znL-Be-q03"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HvF-Su-mpK" userLabel="First Responder" sceneMemberID="firstResponder"/>

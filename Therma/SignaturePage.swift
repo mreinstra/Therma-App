@@ -14,7 +14,7 @@ class SignaturePage: UIViewController {
     var swiped = false
     
     var myMeeting = info()
-    @IBOutlet weak var memberName: UITextField!
+    
     
     @IBOutlet weak var drawingImageView: UIImageView!
     
@@ -166,19 +166,14 @@ UIGraphicsBeginImageContext(view.frame.size)
         {
             myMeeting.supervisor = supervisorInput.text!
         }
-        if segue.destination is Notes
+        if segue.destination is AddingOtherMembers
         {
-            let vc = segue.destination as? Notes
+            let vc = segue.destination as? AddingOtherMembers
             
             vc?.myMeeting = myMeeting
         }
     }
     
-    @IBAction func saveAddAnother(_ sender: Any) {
-        let nameToSave = memberName.text;
-        memberName.text = "";
-        myMeeting.text_signatures.append(nameToSave!)
-    }
     
 
 

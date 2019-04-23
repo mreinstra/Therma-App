@@ -82,6 +82,8 @@ class ConfirmationPage: UIViewController {
         imageView.image = myMeeting.image_signatures[0]
         print(myMeeting.text_signatures)
         // Do any additional setup after loading the view.
+        
+        print(myMeeting.toString())
     }
     
 
@@ -151,9 +153,25 @@ class ConfirmationPage: UIViewController {
     
     @IBAction func shareMailData()
     {
-        let mailData = MailObject(subjectLine: subject, messageBody: trueBody, attachment: image)
         
-        let sharingVC = UIActivityViewController(activityItems: [mailData], applicationActivities: nil)
+        //let activityViewController =
+          //  UIActivityViewController(activityItems: [string, url, image, pdf],
+          //applicationActivities: nil)
+        
+        let string = "Hello, world!"
+        let url = URL(string: "https://nshipster.com")!
+        let image = UIImage(named: "mustache.jpg")
+        let pdf = Bundle.main.url(forResource: "Q4 Projections",
+                                  withExtension: "pdf")
+        
+        let sharingVC =
+            UIActivityViewController(activityItems: [string, url],
+                                     applicationActivities: nil)
+
+        
+       // let mailData = MailObject(subjectLine: subject, messageBody: trueBody, attachment: image)
+        
+        //let sharingVC = UIActivityViewController(activityItems: [mailData], applicationActivities: nil)
         
         // want to force it to only share with mail apps? Then restrict everything else, thusly:
         sharingVC.excludedActivityTypes = [ UIActivity.ActivityType.addToReadingList,

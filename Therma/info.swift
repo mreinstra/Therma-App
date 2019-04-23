@@ -23,7 +23,7 @@ class info: NSObject
     
     func toString() -> String
     {
-        let str = "topic: " + topic + "\ndate: " + date + "\nsupervisor: " + supervisor + "\nsite: " + site + "\nnotes: " + notes + "\nmeeting text: \n" + meetingText
+        let str = "topic: " + topic + "\ndate: " + date + "\nsupervisor: " + supervisor + "\nsite: " + site + "\nmembers: " + ((text_signatures).joined(separator:"\n")) + "\nnotes: " + notes + "\nmeeting text: \n" + meetingText
         
         return (str)
         //print("signatures: " + signatures)
