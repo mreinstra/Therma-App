@@ -28,24 +28,26 @@ class ConfirmationPage: UIViewController {
         print("meeting saved!!!")
         let file = "file.txt" //this is the file. we will write to and read from it
         
-        let text = " hello " //just a text
+        var text = myMeeting.date + "\n@@@@@" + myMeeting.toString() + "\n@@@@@" + trueBody //just a text
         
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             
             let fileURL = dir.appendingPathComponent(file)
             
+            do {
+                let text2 = try String(contentsOf: fileURL, encoding: .utf8)
+                print("original: " + text2)
+                text = text2 + "\n**********\n" + text
+            }
+            catch {print("trouble reading")}
+            
             //writing
             do {
                 try text.write(to: fileURL, atomically: false, encoding: .utf8)
+                print("new: " + text)
             }
-            catch {print("well crap")}
+            catch {print("trouble writing")}
             
-            //reading
-            do {
-                let text2 = try String(contentsOf: fileURL, encoding: .utf8)
-                print(text2)
-            }
-            catch {print("nice try")}
         }
         print("finished")
     }
@@ -68,6 +70,8 @@ class ConfirmationPage: UIViewController {
         subject = String(date) + ", " + String(site) + ", " + String(topic)
         
         let imageData = getSavedImage(named: "FirstSignature")!.pngData()
+        
+        
         body = "Supervisor: " + String(supervisor) + "\n" + "Site: " + String(site) + "\n" + "Additional Notes: " + String(notes) + "\n" + "Also need attendees, signatures, and photo" + "\n\n\n\n" + "Meeting Text: " + String(meetingText)
         print(body)
         

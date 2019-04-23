@@ -12,6 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let str = "04-22-2019 19:30 Plea"
+        
+        let mySubstring = str.prefix(16) // Hello
+        print(mySubstring)
         // Do any additional setup after loading the view, typically from a nib.
     }
     

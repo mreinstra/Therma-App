@@ -21,14 +21,11 @@ class info: NSObject
     var meetingText = ""
     var photo = UIImage()
     
-    func toString()
+    func toString() -> String
     {
-        print("topic: " + topic)
-        print("date: " + date)
-        print("supervisor: " + supervisor)
-        print("site: " + site)
-        print("notes: " + notes)
-        print("meetingText: " + meetingText)
+        let str = "topic: " + topic + "\ndate: " + date + "\nsupervisor: " + supervisor + "\nsite: " + site + "\nnotes: " + notes + "\nmeeting text: \n" + meetingText
+        
+        return (str)
         //print("signatures: " + signatures)
     }
 }

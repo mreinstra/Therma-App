@@ -14,9 +14,6 @@ class PastMeetingsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        meetings.append("test1")
-        meetings.append("test2")
-        meetings.append("test3")
         
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             
@@ -24,7 +21,10 @@ class PastMeetingsTableViewController: UITableViewController {
             
             do {
                 let text2 = try String(contentsOf: fileURL, encoding: .utf8)
-                print(text2)
+                let testArray = text2.components(separatedBy: "\n**********\n")
+                meetings += testArray
+                print(testArray)
+                //\n**********\n
             }
             catch {print("nice try")}
         }
@@ -61,6 +61,7 @@ class PastMeetingsTableViewController: UITableViewController {
 
         let meeting = meetings[indexPath.row]
         let label = cell.viewWithTag(400) as! UILabel
+        //label.text = String(meeting.prefix(16))
         label.text = meeting
         return cell
     }

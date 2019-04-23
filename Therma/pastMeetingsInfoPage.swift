@@ -13,13 +13,22 @@ class pastMeetingsInfoPage: UIViewController {
     
     var name: String = ""
     var subject: String = ""
-    var body: String = "test test test"
+    var body: String = ""
+    
 
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var bodyText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = name
+        let arr = name.components(separatedBy: "\n@@@@@")
+        print(arr)
+        nameLabel.text = String(arr[0])
+        
+        bodyText.text = arr[1]
+        
+        body = arr[2]
         
 
         // Do any additional setup after loading the view.
