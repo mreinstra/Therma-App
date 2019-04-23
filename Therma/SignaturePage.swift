@@ -162,7 +162,10 @@ UIGraphicsBeginImageContext(view.frame.size)
     {
         print(myMeeting.text_signatures)
         // enter supervisor
-        myMeeting.supervisor = supervisorInput.text!
+        if(supervisorInput.text != nil)
+        {
+            myMeeting.supervisor = supervisorInput.text!
+        }
         if segue.destination is Notes
         {
             let vc = segue.destination as? Notes
