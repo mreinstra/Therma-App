@@ -80,7 +80,7 @@ class ConfirmationPage: UIViewController {
         image = getSavedImage(named: "FirstSignature")!
         myMeeting.image_signatures.append(image)
         imageView.image = myMeeting.image_signatures[0]
-
+        print(myMeeting.text_signatures)
         // Do any additional setup after loading the view.
     }
     

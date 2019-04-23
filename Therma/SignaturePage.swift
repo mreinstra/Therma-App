@@ -14,7 +14,8 @@ class SignaturePage: UIViewController {
     var swiped = false
     
     var myMeeting = info()
-
+    @IBOutlet weak var memberName: UITextField!
+    
     @IBOutlet weak var drawingImageView: UIImageView!
     
     @IBAction func doneButton()
@@ -159,6 +160,8 @@ UIGraphicsBeginImageContext(view.frame.size)
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        print(myMeeting.text_signatures)
+        // enter supervisor
         myMeeting.supervisor = supervisorInput.text!
         if segue.destination is Notes
         {
@@ -168,7 +171,12 @@ UIGraphicsBeginImageContext(view.frame.size)
         }
     }
     
-
+    @IBAction func saveAddAnother(_ sender: Any) {
+        let nameToSave = memberName.text;
+        memberName.text = "";
+        myMeeting.text_signatures.append(nameToSave!)
+    }
+    
 
 
 }
