@@ -165,7 +165,7 @@ class ConfirmationPage: UIViewController {
                                   withExtension: "pdf")
         
         let sharingVC =
-            UIActivityViewController(activityItems: [string, url],
+            UIActivityViewController(activityItems: [string, url, myMeeting.image_signatures[0]],
                                      applicationActivities: nil)
 
         
