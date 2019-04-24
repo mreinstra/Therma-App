@@ -42,9 +42,9 @@ class Notes: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         myMeeting.notes = input.text!
-        if segue.destination is ConfirmationPage
+        if segue.destination is Camera
         {
-            let vc = segue.destination as? ConfirmationPage
+            let vc = segue.destination as? Camera
             
             vc?.myMeeting = myMeeting
         }

@@ -85,7 +85,8 @@ class ConfirmationPage: UIViewController {
         
         image = getSavedImage(named: "FirstSignature")!
         myMeeting.image_signatures.append(image)
-        imageView.image = myMeeting.image_signatures[0]
+        
+        imageView.image = myMeeting.photo
         print(myMeeting.text_signatures)
         // Do any additional setup after loading the view.
         
@@ -167,9 +168,12 @@ class ConfirmationPage: UIViewController {
         let string = trueBody
         let image = myMeeting.image_signatures[0]
         
+        let photo = myMeeting.photo
+        
         let sharingVC =
             UIActivityViewController(activityItems: [string, image],
                                      applicationActivities: nil)
+        //activityItems.append("hello")
 
         
        // let mailData = MailObject(subjectLine: subject, messageBody: trueBody, attachment: image)

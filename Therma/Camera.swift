@@ -33,6 +33,11 @@ class Camera: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
         present(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func doneButton()
+    {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
         //myMeeting.photo = info[.originalImage] as? UIImage
@@ -48,6 +53,17 @@ class Camera: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is ConfirmationPage
+        {
+            let vc = segue.destination as? ConfirmationPage
+            
+            vc?.myMeeting = myMeeting
+        }
     }
 
     
