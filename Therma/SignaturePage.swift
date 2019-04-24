@@ -112,6 +112,7 @@ class SignaturePage: UIViewController {
     
     @IBAction func save()
     {
+      // let myImage = UIGraphicsGetImageFromCurrentImageContext()
        // I added this code to try saving to the directory. (See saveImage function below)
         
         
@@ -121,12 +122,16 @@ UIGraphicsBeginImageContext(view.frame.size)
             if let myImage = UIGraphicsGetImageFromCurrentImageContext()
             {
                 UIImageWriteToSavedPhotosAlbum(myImage, nil, nil, nil)
+                myMeeting.image_signatures.append(UIGraphicsGetImageFromCurrentImageContext()!)
                 // or do something else with the image here.
             }
             // I ADDED THIS LINE:
             saveImage(imageName: "FirstSignature", image: UIGraphicsGetImageFromCurrentImageContext()!)
             UIGraphicsEndImageContext()
+            
+            
         }
+       
     }
     
     
@@ -155,6 +160,8 @@ UIGraphicsBeginImageContext(view.frame.size)
         } catch let error {
             print("error saving file with error", error)
         }
+        
+        
         
     }
     

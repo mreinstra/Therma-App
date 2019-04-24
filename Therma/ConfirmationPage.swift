@@ -166,12 +166,13 @@ class ConfirmationPage: UIViewController {
           //applicationActivities: nil)
         
         let string = trueBody
-        let image = myMeeting.image_signatures[0]
+      // let image = myMeeting.image_signatures[0]
+        let images = myMeeting.image_signatures
         
         let photo = myMeeting.photo
         
         let sharingVC =
-            UIActivityViewController(activityItems: [string, image],
+            UIActivityViewController(activityItems: [string, images],
                                      applicationActivities: nil)
         //activityItems.append("hello")
 
