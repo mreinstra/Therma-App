@@ -116,13 +116,18 @@ class SignaturePage: UIViewController {
        // I added this code to try saving to the directory. (See saveImage function below)
         
         
-UIGraphicsBeginImageContext(view.frame.size)
+        UIGraphicsBeginImageContext(view.frame.size)
         if let context = UIGraphicsGetCurrentContext() {
             drawingImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
             if let myImage = UIGraphicsGetImageFromCurrentImageContext()
             {
                 UIImageWriteToSavedPhotosAlbum(myImage, nil, nil, nil)
-                myMeeting.image_signatures.append(UIGraphicsGetImageFromCurrentImageContext()!)
+                
+                let compressData = UIGraphicsGetImageFromCurrentImageContext()!.jpegData(compressionQuality: 0.1)
+                let compressedImage = UIImage(data: compressData!)!
+                
+                myMeeting.image_signatures.append(compressedImage)
+                //myMeeting.image_signatures.append(UIGraphicsGetImageFromCurrentImageContext()!)
                 // or do something else with the image here.
             }
             // I ADDED THIS LINE:

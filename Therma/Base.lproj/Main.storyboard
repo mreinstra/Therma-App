@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -446,6 +446,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="save" destination="dVF-Ge-mfz" eventType="touchUpInside" id="3pD-IS-zYN"/>
                                     <action selector="shareData" destination="dVF-Ge-mfz" eventType="touchUpInside" id="2jo-2s-xwE"/>
                                     <segue destination="Hf0-gk-BPW" kind="presentation" id="hmY-lM-iDV"/>
                                 </connections>
@@ -460,14 +461,6 @@
                                 <connections>
                                     <action selector="doneButton" destination="zMX-bH-TbM" eventType="touchUpInside" id="LPW-rl-gNs"/>
                                     <action selector="doneButton" destination="dVF-Ge-mfz" eventType="touchUpInside" id="YSn-5n-2sB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UB-mR-472">
-                                <rect key="frame" x="170" y="619" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="save" destination="dVF-Ge-mfz" eventType="touchUpInside" id="lc8-fA-uM1"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lH8-V0-T3k">
@@ -531,6 +524,7 @@
                                     <color key="titleColor" red="0.33725490200000002" green="0.74509803919999995" blue="1" alpha="0.78697183100000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="save" destination="Hf0-gk-BPW" eventType="touchUpInside" id="aOf-zj-yfK"/>
                                     <action selector="saveAddAnother:" destination="Hf0-gk-BPW" eventType="touchUpInside" id="EH9-VC-HEQ"/>
                                     <segue destination="AaS-Fa-l6V" kind="presentation" id="JIj-Gk-1Bq"/>
                                 </connections>
@@ -571,6 +565,7 @@
                                     <color key="titleColor" red="0.33725490200000002" green="0.74509803919999995" blue="1" alpha="0.78697183100000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="save" destination="Hf0-gk-BPW" eventType="touchUpInside" id="CFR-qY-HwY"/>
                                     <action selector="saveAddAnother:" destination="Hf0-gk-BPW" eventType="touchUpInside" id="oO1-Ig-TrN"/>
                                 </connections>
                             </button>
@@ -722,14 +717,6 @@
                                     <segue destination="coc-oH-pTZ" kind="presentation" id="eFz-fW-6yA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAb-Lo-sL9">
-                                <rect key="frame" x="161" y="432" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="test"/>
-                                <connections>
-                                    <action selector="photos" destination="Fz5-nQ-VrL" eventType="touchUpInside" id="XlM-1G-Jh2"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xGc-Qj-CKp"/>
@@ -783,14 +770,6 @@
                                     <action selector="doneButton" destination="coc-oH-pTZ" eventType="touchUpInside" id="bMl-c3-KQx"/>
                                     <action selector="doneButton" destination="dVF-Ge-mfz" eventType="touchUpInside" id="dNR-id-Aqr"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQW-6D-L4z">
-                                <rect key="frame" x="115" y="179" width="145" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                <state key="normal" title="try camera">
-                                    <color key="titleColor" red="0.33725490200000002" green="0.74509803919999995" blue="1" alpha="0.78697183100000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Og0-cQ-eS4">
                                 <rect key="frame" x="64" y="479" width="240" height="128"/>

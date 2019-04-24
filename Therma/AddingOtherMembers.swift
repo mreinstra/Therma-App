@@ -113,21 +113,30 @@ class AddingOtherMembers: UIViewController {
     {
         // I added this code to try saving to the directory. (See saveImage function below)
         
-    myMeeting.image_signatures.append(UIGraphicsGetImageFromCurrentImageContext()!)
-        
         UIGraphicsBeginImageContext(view.frame.size)
         if let context = UIGraphicsGetCurrentContext() {
             otherSignatures.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
             if let myImage = UIGraphicsGetImageFromCurrentImageContext()
             {
                 UIImageWriteToSavedPhotosAlbum(myImage, nil, nil, nil)
+                
+                
+                //myMeeting.image_signatures.append(UIGraphicsGetImageFromCurrentImageContext()!)
+                
+                
+                let compressData = UIGraphicsGetImageFromCurrentImageContext()!.jpegData(compressionQuality: 0.1)
+                let compressedImage = UIImage(data: compressData!)!
+                
+                myMeeting.image_signatures.append(compressedImage)
                 // or do something else with the image here.
             }
             // I ADDED THIS LINE:
-            saveImage(imageName: "FirstSignature", image: UIGraphicsGetImageFromCurrentImageContext()!)
+            //saveImage(imageName: "FirstSignature", image: UIGraphicsGetImageFromCurrentImageContext()!)
             UIGraphicsEndImageContext()
         }
     }
+    
+    
     
     
     // Example function to save an image to the app's document directory.

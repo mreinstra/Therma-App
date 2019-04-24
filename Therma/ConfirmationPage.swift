@@ -83,8 +83,8 @@ class ConfirmationPage: UIViewController {
         
         trueBody = "Please copy the following text into the subject line: " + subject + "\n\n" + body
         
-        image = getSavedImage(named: "FirstSignature")!
-        myMeeting.image_signatures.append(image)
+        //image = getSavedImage(named: "FirstSignature")!
+        //myMeeting.image_signatures.append(image)
         
         imageView.image = myMeeting.photo
         print(myMeeting.text_signatures)
@@ -169,12 +169,22 @@ class ConfirmationPage: UIViewController {
       // let image = myMeeting.image_signatures[0]
         let images = myMeeting.image_signatures
         
-        let photo = myMeeting.photo
+        var arr = [Any]()
+        arr.append(string)
+        arr += images
+        //arr.append(images)
+        
+       // let photo = myMeeting.photo
+        
+        arr.append(myMeeting.photo)
+        
+        print(arr.count)
         
         let sharingVC =
-            UIActivityViewController(activityItems: [string, images],
+            UIActivityViewController(activityItems: arr,
                                      applicationActivities: nil)
         //activityItems.append("hello")
+        //print(sharingVC.activityItems)
 
         
        // let mailData = MailObject(subjectLine: subject, messageBody: trueBody, attachment: image)
