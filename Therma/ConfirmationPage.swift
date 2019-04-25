@@ -52,7 +52,7 @@ class ConfirmationPage: UIViewController {
         print("finished")
     }
 
-    @IBOutlet weak var imageView: UIImageView!
+    //@IBOutlet weak var imageView: UIImageView!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,13 +64,12 @@ class ConfirmationPage: UIViewController {
         let notes = myMeeting.notes
         let meetingText = myMeeting.meetingText
         let textSignatures = myMeeting.text_signatures
-        myMeeting.toString()
         toSend = String(topic) + " " + String(date) + " " + String(site) + " " + String(supervisor)
         //print(toSend)
         
         subject = String(date) + ", " + String(site) + ", " + String(topic)
         
-        let imageData = getSavedImage(named: "FirstSignature")!.pngData()
+        //let imageData = getSavedImage(named: "FirstSignature")!.pngData()
         
         
         body = "Supervisor: " + String(supervisor) + "\n" + "Site: " + String(site) + "\n" + "Additional Notes: " + String(notes)
@@ -86,75 +85,14 @@ class ConfirmationPage: UIViewController {
         //image = getSavedImage(named: "FirstSignature")!
         //myMeeting.image_signatures.append(image)
         
-        imageView.image = myMeeting.photo
+        //imageView.image = myMeeting.photo
         print(myMeeting.text_signatures)
         // Do any additional setup after loading the view.
         
         print(myMeeting.toString())
     }
-    
 
-//    @IBAction func sendEmailButton(sender: AnyObject) {
-//        let mailComposeViewController = configuredMailComposeViewController()
-//        if MFMailComposeViewController.canSendMail() {
-//            present(mailComposeViewController, animated: true, completion: nil)
-//           // self.dismiss(animated: true, completion: nil)
-//
-//        } else {
-//            showSendMailErrorAlert()
-//        }
-//
-//    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
-//    func configuredMailComposeViewController() -> MFMailComposeViewController {
-//        let mailComposerVC = MFMailComposeViewController()
-//        mailComposerVC.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
-//
-//        mailComposerVC.setToRecipients(["charlie.donnelly@menloschool.org"])
-//        mailComposerVC.setSubject("About your grade...")
-//        mailComposerVC.setMessageBody(String(toSend), isHTML: false)
-//
-//        let imageData = getSavedImage(named: "FirstSignature")!.pngData()
-//        mailComposerVC.addAttachmentData(imageData!, mimeType: "image/png", fileName: "FirstSignature")
-//        print(mailComposerVC)
-//
-//        return mailComposerVC
-//
-//
-//    }
-    
-//    func showSendMailErrorAlert() {
-//        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
-//        let  OKaction = UIAlertAction (title: "OK" , style: .default , handler: nil )
-//        sendMailErrorAlert.addAction(OKaction)
-//        present(sendMailErrorAlert, animated: true , completion: nil)
-//    }
-//
-//    // MARK: MFMailComposeViewControllerDelegate Method
-//    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-//        controller.dismiss(animated: true, completion: nil)
-//
-//
-//    }
-    
-//    @IBAction func sendEmailButtonTapped(sender: AnyObject) {
-//        let mailComposeViewController = configuredMailComposeViewController()
-//        if MFMailComposeViewController.canSendMail() {
-//            self.present(mailComposeViewController, animated: true, completion: nil)
-//        } else {
-//            self.showSendMailErrorAlert()
-//        }
-//    }
     
     // MARK: - Sharing Data with other Apps
     
@@ -219,4 +157,25 @@ class ConfirmationPage: UIViewController {
         return nil
     }
     
+//    var imagePicker: UIImagePickerController!
+//
+//
+//
+//    @IBAction func takePhoto(_ sender: Any) {
+//        imagePicker =  UIImagePickerController()
+//        imagePicker.delegate = self
+//        imagePicker.sourceType = .camera
+//
+//        present(imagePicker, animated: true, completion: nil)
+//    }
+//
+//
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        imagePicker.dismiss(animated: true, completion: nil)
+//        //myMeeting.photo = info[.originalImage] as? UIImage
+//        //imageView.image = info[.originalImage] as? UIImage
+//        myMeeting.photo = (info[.originalImage] as? UIImage)!
+//        imageView.image = myMeeting.photo
+//    }
+//
 }
